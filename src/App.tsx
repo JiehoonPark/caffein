@@ -1,9 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  return <div></div>;
+  return (
+    <Routes>
+      {/* <Route path='/' element={< />} />
+      <Route path='/about' element={< />} /> */}
+    </Routes>
+  );
 }
 
 export default App;
