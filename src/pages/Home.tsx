@@ -30,7 +30,7 @@ const Banner = styled.div`
   width: 597.51px;
   height: 400px;
   border-radius: 10px;
-  background: url('/Home/header.svg');
+  background: url('/Banner/home_header.svg');
 `;
 
 const Header = styled.div`
