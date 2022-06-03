@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import HeaderSection from '../components/HeaderSection';
+import Card from '../components/Card';
 const Home = () => {
   return (
     <Container>
       <HeaderSection></HeaderSection>
-      <Main></Main>
+      <Main>
+        <Card />
+      </Main>
     </Container>
   );
 };
