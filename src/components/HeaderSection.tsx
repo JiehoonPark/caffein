@@ -8,7 +8,7 @@ export default HeaderSection;
 const Container = styled.div`
   z-index: 1;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 560px;
   background-color: #8148fb;
   background: linear-gradient(

@@ -16,7 +16,7 @@ const Container = styled.div`
   width: 224px;
   height: 280px;
   border-radius: 10px;
-  border: 2px solid red;
+  border: 1px solid black;
   background: ${(props) => `url(${props.img})`};
   padding: 16.29px 16px;
   display: flex;
