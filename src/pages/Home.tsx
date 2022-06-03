@@ -23,7 +23,8 @@ const Home = () => {
 export default Home;
 
 const Container = styled.div`
-  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column; */
 `;
 
 const Banner = styled.div`
@@ -35,10 +36,9 @@ const Banner = styled.div`
 
 const Header = styled.div`
   display: flex;
-  width: 100%;
-  height: 560px;
+  height: 400px;
   justify-content: center;
-  padding: 104px 0px 56px 0px;
+  margin: 40px auto 120px auto;
   > div:nth-child(1) {
     font-family: 'Noto Sans';
     font-style: normal;
@@ -48,6 +48,10 @@ const Header = styled.div`
     color: #ffffff;
     margin-right: 80.32px;
     align-self: flex-end;
+    width: 278.84px;
+    overflow: hidden;
+    word-break: keep-all;
+    -webkit-line-clamp: 2;
   }
 `;
 

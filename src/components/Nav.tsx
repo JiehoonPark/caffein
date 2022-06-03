@@ -23,25 +23,24 @@ function Nav() {
 export default Nav;
 
 const Container = styled.div`
-  position: absolute;
-  top: 0;
-  z-index: 100;
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+  border: 1px solid red;
   height: 64px;
-  padding: 16px 247px;
+  margin: 0 auto;
+  max-width: 960px;
   background-color: ${(props) => (props.url === '/' ? 'none' : '#FFFFFF')};
 `;
 
 const Logo = styled.img`
   width: 71px;
-  height: 32px;
   cursor: pointer;
 `;
 
 const User = styled.img`
-  align-self: center;
   width: 14px;
   height: 18px;
   cursor: pointer;

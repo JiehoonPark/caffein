@@ -6,10 +6,11 @@ function HeaderSection() {
 export default HeaderSection;
 
 const Container = styled.div`
-  z-index: 1;
+  top: 0;
   position: absolute;
   width: 100%;
   height: 560px;
+  z-index: 1;
   background-color: #8148fb;
   background: linear-gradient(
     97.88deg,
