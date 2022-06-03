@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import HeaderSection from '../components/HeaderSection';
-import CampSection from '../components/CampSection';
+import CardSection from '../components/CardSection';
 
 const Home = () => {
   return (
@@ -11,9 +11,10 @@ const Home = () => {
         <Banner />
       </Header>
       <Main>
-        <CampSection text={'인기 부트 캠프'} />
-        <CampSection text={'특가 할인 캠프'} />
+        <CardSection text={'인기 부트 캠프'} type={'camp'} />
+        <CardSection text={'특가 할인 캠프'} type={'camp'} />
         <div>현직자와 소통하며 배우는 실무 스킬, 퍼스널 트레이닝</div>
+        <CardSection text={'커뮤니티'} type={'community'} />
       </Main>
     </Container>
   );

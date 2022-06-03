@@ -45,7 +45,7 @@ const Container = styled.div`
   width: 224px;
   height: 320px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid #cccccc;
   padding: 16px;
 
   > div:nth-child(1) {

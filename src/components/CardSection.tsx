@@ -1,22 +1,32 @@
 import styled from 'styled-components';
 import Card from './Card';
 import CommunityCard from './CommunityCard';
-function CampSection({ text }) {
+function CardSection({ text, type }) {
   //캠프 카드 or 커뮤니티 카드
   //text, card 데이터
   return (
     <Container>
       <SectionHead>{text}</SectionHead>
-      <Cards>
-        {/* <Card />
-        <Card />
-        <Card /> */}
-        <CommunityCard />
-      </Cards>
+      {type === 'camp' && (
+        <Cards>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </Cards>
+      )}
+      {type === 'community' && (
+        <Cards>
+          <CommunityCard />
+          <CommunityCard />
+          <CommunityCard />
+          <CommunityCard />
+        </Cards>
+      )}
     </Container>
   );
 }
-export default CampSection;
+export default CardSection;
 
 const Container = styled.div`
   display: flex;
