@@ -70,4 +70,7 @@ const Main = styled.div`
     letter-spacing: -0.01em;
     color: #ffffff;
   }
+  :last-child {
+    margin-bottom: 242px;
+  }
 `;
