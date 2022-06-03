@@ -1,21 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
-import styled from 'styled-components';
+import Home from './pages/Home';
+import CampDetail from './pages/CampDetail';
+
 function App() {
   return (
-    <Container>
-      <Routes>
-        {/* <Route path='/' element={< />} />
-      <Route path='/about' element={< />} /> */}
-      </Routes>
+    <>
       <Nav />
-    </Container>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        {/* <Route path='/about' element={<CampDetail />} /> */}
+      </Routes>
+    </>
   );
 }
 
 export default App;
-
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-`;

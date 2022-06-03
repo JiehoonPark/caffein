@@ -23,9 +23,12 @@ function Nav() {
 export default Nav;
 
 const Container = styled.div`
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   height: 64px;
   padding: 16px 247px;
   background-color: ${(props) => (props.url === '/' ? 'none' : '#FFFFFF')};
