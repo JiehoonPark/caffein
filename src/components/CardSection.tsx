@@ -1,16 +1,27 @@
 import styled from 'styled-components';
 import CampCard from './CampCard';
 import CommunityCard from './CommunityCard';
-function CardSection({ title, cardType }) {
+import { CardType } from '../types/type';
+import data from './data';
+
+interface IProps {
+  title: string;
+  cardType: CardType;
+}
+
+function CardSection({ title, cardType }: IProps) {
   return (
     <Container>
       <SectionHead>{title}</SectionHead>
       {cardType === 'camp' && (
         <Cards>
+          {data.map((card, key) => {
+            return <CampCard key={key} card={card} />;
+          })}
+          {/* <CampCard />
           <CampCard />
           <CampCard />
-          <CampCard />
-          <CampCard />
+          <CampCard /> */}
         </Cards>
       )}
       {cardType === 'community' && (

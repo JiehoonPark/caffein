@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { ICamp } from '../types/type';
 
-function CampCard(props) {
+interface IProps {
+  card: ICamp;
+}
+
+function CampCard({ card }: IProps) {
   return (
-    <Container img={props.img || undefined}>
-      <div>연구개발</div>
-      <div>강의 제목2줄로작성</div>
-      <div>2월 28일부터</div>
+    <Container img={card.thumbnail}>
+      <div>{card.status}</div>
+      <div>{card.name}</div>
+      <div>{card.startDate}</div>
     </Container>
   );
 }
