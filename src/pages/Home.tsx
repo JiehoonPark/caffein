@@ -11,10 +11,10 @@ const Home = () => {
         <Banner />
       </Header>
       <Main>
-        <CardSection text={'인기 부트 캠프'} type={'camp'} />
-        <CardSection text={'특가 할인 캠프'} type={'camp'} />
+        <CardSection title={'인기 부트 캠프'} cardType={'camp'} />
+        <CardSection title={'특가 할인 캠프'} cardType={'camp'} />
         <div>현직자와 소통하며 배우는 실무 스킬, 퍼스널 트레이닝</div>
-        <CardSection text={'커뮤니티'} type={'community'} />
+        <CardSection title={'커뮤니티'} cardType={'community'} />
       </Main>
     </Container>
   );

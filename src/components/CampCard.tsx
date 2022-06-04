@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-function Card(props) {
+function CampCard(props) {
   return (
     <Container img={props.img || undefined}>
       <div>연구개발</div>
@@ -10,7 +10,7 @@ function Card(props) {
     </Container>
   );
 }
-export default Card;
+export default CampCard;
 
 const Container = styled.div`
   width: 224px;

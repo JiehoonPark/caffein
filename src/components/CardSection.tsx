@@ -1,21 +1,19 @@
 import styled from 'styled-components';
-import Card from './Card';
+import CampCard from './CampCard';
 import CommunityCard from './CommunityCard';
-function CardSection({ text, type }) {
-  //캠프 카드 or 커뮤니티 카드
-  //text, card 데이터
+function CardSection({ title, cardType }) {
   return (
     <Container>
-      <SectionHead>{text}</SectionHead>
-      {type === 'camp' && (
+      <SectionHead>{title}</SectionHead>
+      {cardType === 'camp' && (
         <Cards>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <CampCard />
+          <CampCard />
+          <CampCard />
+          <CampCard />
         </Cards>
       )}
-      {type === 'community' && (
+      {cardType === 'community' && (
         <Cards>
           <CommunityCard />
           <CommunityCard />
