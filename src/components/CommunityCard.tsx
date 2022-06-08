@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import font from '../styles/font';
 
 function CommunityCard() {
   return (
@@ -63,23 +64,13 @@ const Label = styled.div`
   color: ${(props) => props.color};
   background-color: ${(props) => props.backgroundColor};
   text-align: center;
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: -0.01em;
+  ${font.Caption}
   float: left;
   margin-bottom: 8px;
 `;
 
 const Title = styled.div`
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: -0.01em;
+  ${font.Body1}
   margin-bottom: 10px;
 `;
 
