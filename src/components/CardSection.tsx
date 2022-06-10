@@ -2,7 +2,11 @@ import styled from 'styled-components';
 import CampCard from './CampCard';
 import CommunityCard from './CommunityCard';
 import { CardType } from '../types/type';
+<<<<<<< HEAD
 import mockData from '../sample/mockData';
+=======
+import data from './data';
+>>>>>>> 21e1ecb55b9b525b1c7c78acedc4997ca1fd0fe5
 import font from '../styles/font';
 
 interface IProps {
@@ -16,7 +20,11 @@ function CardSection({ title, cardType }: IProps) {
       <SectionHead>{title}</SectionHead>
       {cardType === 'camp' && (
         <CardWrapper>
+<<<<<<< HEAD
           {mockData.camp.map((card, key) => {
+=======
+          {data.map((card, key) => {
+>>>>>>> 21e1ecb55b9b525b1c7c78acedc4997ca1fd0fe5
             return <CampCard key={key} card={card} />;
           })}
         </CardWrapper>
