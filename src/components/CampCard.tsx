@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ICamp } from '../types/type';
+import font from '../styles/font';
 
 interface IProps {
   card: ICamp;
@@ -37,20 +38,13 @@ const Container = styled.div`
   color: #ffffff;
 
   > div:nth-child(1) {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: -0.01em;
+    ${font.Body2}
   }
   > div:nth-child(2) {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
+    ${font.Body1}
   }
   > div:nth-child(3) {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    ${font.Caption}
   }
 
   > div:not(:last-child) {
