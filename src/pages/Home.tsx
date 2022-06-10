@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import HeaderSection from '../components/HeaderSection';
 import CardSection from '../components/CardSection';
+import font from '../styles/font';
 
 const Home = () => {
   return (
@@ -40,11 +41,6 @@ const Header = styled.div`
   justify-content: center;
   margin: 40px auto 120px auto;
   > div:nth-child(1) {
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 65px;
     color: #ffffff;
     margin-right: 80.32px;
     align-self: flex-end;
@@ -66,12 +62,7 @@ const Main = styled.div`
     margin: 56px auto 6px auto;
     padding: 33px 42px;
     background: #7471ff;
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: -0.01em;
+    ${font.H2}
     color: #ffffff;
   }
   :last-child {
