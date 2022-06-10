@@ -40,11 +40,6 @@ const Header = styled.div`
   justify-content: center;
   margin: 40px auto 120px auto;
   > div:nth-child(1) {
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 65px;
     color: #ffffff;
     margin-right: 80.32px;
     align-self: flex-end;

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import CampCard from './CampCard';
 import CommunityCard from './CommunityCard';
 import { CardType } from '../types/type';
-import data from './data';
+import mockData from '../sample/mockData';
+import font from '../styles/font';
 
 interface IProps {
   title: string;
@@ -14,23 +15,19 @@ function CardSection({ title, cardType }: IProps) {
     <Container>
       <SectionHead>{title}</SectionHead>
       {cardType === 'camp' && (
-        <Cards>
-          {data.map((card, key) => {
+        <CardWrapper>
+          {mockData.camp.map((card, key) => {
             return <CampCard key={key} card={card} />;
           })}
-          {/* <CampCard />
-          <CampCard />
-          <CampCard />
-          <CampCard /> */}
-        </Cards>
+        </CardWrapper>
       )}
       {cardType === 'community' && (
-        <Cards>
+        <CardWrapper>
           <CommunityCard />
           <CommunityCard />
           <CommunityCard />
           <CommunityCard />
-        </Cards>
+        </CardWrapper>
       )}
     </Container>
   );
@@ -45,16 +42,11 @@ const Container = styled.div`
 `;
 
 const SectionHead = styled.span`
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 34px;
-  letter-spacing: -0.01em;
+  ${font.H2}
   margin-bottom: 9px;
 `;
 
-const Cards = styled.div`
+const CardWrapper = styled.div`
   width: 100%;
   display: flex;
   > div:not(:last-child) {
