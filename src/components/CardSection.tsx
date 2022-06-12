@@ -4,6 +4,7 @@ import CommunityCard from './CommunityCard';
 import { CardType } from '../types/type';
 import mockData from '../sample/mockData';
 import font from '../styles/font';
+import { useMediaQuery } from 'react-responsive';
 
 interface IProps {
   title: string;
@@ -11,6 +12,10 @@ interface IProps {
 }
 
 function CardSection({ title, cardType }: IProps) {
+  const isMobile = useMediaQuery({ query: '(max-width: 375px)' });
+  if (isMobile && cardType === 'community') {
+    return null;
+  }
   return (
     <Container>
       <SectionHead>{title}</SectionHead>
@@ -51,5 +56,13 @@ const CardWrapper = styled.div`
   display: flex;
   > div:not(:last-child) {
     margin-right: 21.5px;
+  }
+
+  @media (max-width: 375px) {
+    margin: auto 0px;
+    flex-direction: column;
+    > div:not(:last-child) {
+      margin: 0px 0px 8px 0px;
+    }
   }
 `;

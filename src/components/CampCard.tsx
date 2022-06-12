@@ -29,6 +29,7 @@ const Container = styled.div`
       #000000 70.83%
     ),
     ${(props) => `url(${props.img})`};
+  background-repeat: no-repeat;
 
   padding: 16.29px 16px;
   display: flex;
@@ -49,5 +50,11 @@ const Container = styled.div`
 
   > div:not(:last-child) {
     margin-bottom: 10.8px;
+  }
+
+  @media (max-width: 375px) {
+    width: 327px;
+    height: 280px;
+    background-size: cover;
   }
 `;

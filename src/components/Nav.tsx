@@ -28,7 +28,6 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   z-index: 100;
-  border: 1px solid red;
   height: 64px;
   margin: 0 auto;
   max-width: 960px;

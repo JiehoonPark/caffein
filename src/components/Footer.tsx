@@ -46,6 +46,9 @@ const Container = styled.div`
     max-width: 960px;
     margin: 0 auto;
   }
+  @media (max-width: 375px) {
+    padding: 28px 18px 27px 18px;
+  }
 `;
 
 const Logo = styled.img`
