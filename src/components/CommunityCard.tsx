@@ -48,7 +48,7 @@ const Container = styled.div`
   border-radius: 10px;
   border: 1px solid #cccccc;
   padding: 16px;
-
+  box-shadow: 0 6px 7px -4px grey;
   > div:nth-child(1) {
     display: flex;
     > div:not(:last-child) {
