@@ -1,6 +1,6 @@
 export type CardType = 'community' | 'camp';
 export interface ICamp {
-  // id: number;
+  id: number;
   name: string;
   status: string;
   // field: string;

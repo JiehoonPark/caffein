@@ -10,7 +10,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/' element={<Home />} />
-        {/* <Route path='/about' element={<CampDetail />} /> */}
+        <Route path='/camp/:id' element={<CampDetail />} />
       </Routes>
       <Footer />
     </>
