@@ -2,14 +2,26 @@ import styled from 'styled-components';
 import HeaderSection from '../components/HeaderSection';
 import CardSection from '../components/CardSection';
 import font from '../styles/font';
+import { useState, useEffect } from 'react';
+import { getCamps } from '../apis/campApi';
 
 const Home = () => {
+  const [campData, setCampData] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function getCampData() {
+      const data = await getCamps();
+      setCampData(data);
+    }
+    getCampData();
+  }, []);
+
   return (
     <Container>
       <HeaderSection />
       <Main>
-        <CardSection title={'인기 부트 캠프'} cardType={'camp'} />
-        <CardSection title={'특가 할인 캠프'} cardType={'camp'} />
+        <CardSection title={'인기 부트 캠프'} cardType={'camp'} cardData={campData} />
+        <CardSection title={'특가 할인 캠프'} cardType={'camp'} cardData={campData} />
         <div>현직자와 소통하며 배우는 실무 스킬, 퍼스널 트레이닝</div>
         <CardSection title={'커뮤니티'} cardType={'community'} />
       </Main>
