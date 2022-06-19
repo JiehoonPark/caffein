@@ -31,6 +31,7 @@ const Container = styled.div`
     ),
     ${(props) => `url(${props.img})`};
   background-repeat: no-repeat;
+  background-size: cover;
 
   padding: 16.29px 16px;
   display: flex;
