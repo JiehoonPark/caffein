@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { ICamp } from '../types/type';
 import font from '../styles/font';
 import { useNavigate } from 'react-router-dom';
+import dayjs from 'dayjs';
 
 interface IProps {
   card: ICamp;
@@ -13,7 +14,7 @@ function CampCard({ card }: IProps) {
     <Container img={card.thumbnail} onClick={() => navigate(`/camp/${card.id}`)}>
       <div>{card.status}</div>
       <div>{card.name}</div>
-      <div>{card.startDate}</div>
+      <div>{dayjs(card.startDate).format('M월 DD일부터')}</div>
     </Container>
   );
 }
