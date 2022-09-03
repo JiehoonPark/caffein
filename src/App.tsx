@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/camp/:id" element={<CampDetail />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </QueryClientProvider>
