@@ -9,7 +9,7 @@ function App() {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <Nav /> */}
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/camp/:id" element={<CampDetail />} />
