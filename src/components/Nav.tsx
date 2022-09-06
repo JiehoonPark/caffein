@@ -1,23 +1,23 @@
-import styled from 'styled-components';
-import { useLocation, Link } from 'react-router-dom';
-import color from '../styles/color';
+import styled from "styled-components";
+import { useLocation, Link } from "react-router-dom";
+
 function Nav() {
   const location = useLocation();
   return (
     <Container>
       <Main url={location.pathname}>
-        <Link to='/'>
-          {location.pathname === '/' ? (
-            <Logo src='/Logo/caffein_w.svg' alt='caffein logo' />
+        <Link to="/">
+          {/* {location.pathname === "/" ? (
+            <Logo src="/Logo/caffein_w.svg" alt="caffein logo" />
           ) : (
-            <Logo src='/Logo/caffein.svg' alt='caffein logo' />
-          )}
+            <Logo src="/Logo/caffein.svg" alt="caffein logo" />
+          )} */}
         </Link>
-        {location.pathname === '/' ? (
-          <User src='/Icon/mypage_w.svg' alt='mypage icon' />
+        {/* {location.pathname === "/" ? (
+          <User src="/Icon/mypage_w.svg" alt="mypage icon" />
         ) : (
-          <User src='/Icon/mypage.svg' alt='mypage icon' />
-        )}
+          <User src="/Icon/mypage.svg" alt="mypage icon" />
+        )} */}
       </Main>
     </Container>
   );
@@ -37,7 +37,7 @@ const Main = styled.div`
   height: 64px;
   margin: 0 auto;
   max-width: 960px;
-  background-color: ${(props) => (props.url === '/' ? 'none' : '#FFFFFF')};
+  background-color: ${(props) => (props.url === "/" ? "none" : "#FFFFFF")};
 `;
 
 const Logo = styled.img`
