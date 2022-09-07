@@ -1,52 +1,63 @@
-import styled from "styled-components";
-import { useLocation, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
 
-function Nav() {
-  const location = useLocation();
+const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    changeBackground();
+    window.addEventListener("scroll", changeBackground);
+  });
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
   return (
-    <Container>
-      <Main url={location.pathname}>
+    <Container isScrolled={isScrolled}>
+      <div className="main">
         <Link to="/">
-          {/* {location.pathname === "/" ? (
-            <Logo src="/Logo/caffein_w.svg" alt="caffein logo" />
-          ) : (
-            <Logo src="/Logo/caffein.svg" alt="caffein logo" />
-          )} */}
+          <img className="logo" alt="로고" />
         </Link>
-        {/* {location.pathname === "/" ? (
-          <User src="/Icon/mypage_w.svg" alt="mypage icon" />
-        ) : (
-          <User src="/Icon/mypage.svg" alt="mypage icon" />
-        )} */}
-      </Main>
+        <Link to="/community">
+          <img className="ic-person" alt="프로필" />
+        </Link>
+      </div>
     </Container>
   );
-}
-export default Nav;
+};
 
-const Container = styled.div`
-  position: absolute;
-  width: 100%;
+export default Navigation;
+const Container = styled.nav<{ isScrolled: boolean }>`
   z-index: 100;
-`;
-
-const Main = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
-  margin: 0 auto;
-  max-width: 960px;
-  background-color: ${(props) => (props.url === "/" ? "none" : "#FFFFFF")};
-`;
-
-const Logo = styled.img`
-  width: 71px;
-  cursor: pointer;
-`;
-
-const User = styled.img`
-  width: 14px;
-  height: 18px;
-  cursor: pointer;
+  position: fixed;
+  width: 100%;
+  ${(props) =>
+    props.isScrolled &&
+    css`
+      background-color: white;
+      transition: 0.5s;
+    `}
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+  }
+  .logo {
+    width: 88px;
+    height: 24px;
+  }
+  .logo {
+    width: 80px;
+    height: 22px;
+  }
+  .ic-person {
+    width: 24px;
+    height: 24px;
+  }
 `;
