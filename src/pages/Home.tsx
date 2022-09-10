@@ -4,6 +4,7 @@ import CardSection from "../components/CardSection";
 import font from "../styles/font";
 import { getCamps } from "../apis/campApi";
 import { useQuery } from "react-query";
+
 const Home = () => {
   const campData = useQuery("camp", getCamps);
 
@@ -42,7 +43,6 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   > div:nth-child(3) {
-    //중간위치 배너 "현직자와 소통하며 배우는 실무 스킬, 퍼스널 트레이닝"
     width: 100%;
     height: 100px;
     margin: 56px auto 6px auto;
